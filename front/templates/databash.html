@@ -127,16 +127,14 @@
     <div class="col-md-8 order-md-1 px-5">
       <p class="display-6 text-white">摘要</p>
         <div class="container bg-white bg-opacity-10 pt-5">
-           <img class="dtbj_pic" src="{{ url_for('static', filename='pic/demo.jpg') }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 5px;"/>
-          <img class="dtbj_pic" src="{{ url_for('static', filename='pic/demo.jpg') }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 5px;"/>
-          <img class="dtbj_pic" src="{{ url_for('static', filename='pic/demo.jpg') }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 5px;"/>
+           <img class="dtbj_pic" src="{{ url_for('static', filename=cam_pic_path) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 5px;"/>
+          <img class="dtbj_pic" src="{{ url_for('static', filename=win_pic_path) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 5px;"/>
         <div>
           <br>
         <div class="container bg-white bg-opacity-10 shadow-lg row pt-4 text-white">
           <div class="col">
-            <h3>关键数据：</h3><p class="lead">114514</p>
-            <h3>关键数据2：</h3><p class="lead">114514</p>
-            <h3>关键数据3：</h3><p class="lead">114514</p>
+            <h3>是否深度伪造：</h3><p class="lead">{{ real }}</p>
+            <h3>判断精度：</h3><p class="lead">{{ real_rate }}%</p>
           </div>
           <div class="col">
             <h3>数据解释:</h3>
