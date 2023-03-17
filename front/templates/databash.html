@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>CISCN DataScreen</title>
+    <title>深度伪造检测系统 数据大屏</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/product/">
 
@@ -54,100 +54,84 @@
 <main>
 
   <div class="py-3 row">
-    <div class="col-md-4 order-md-2 mb-4 px-4">
+    <div class="col-md-8 order-md-2 mb-4 px-4">
       <p class="display-6 text-white">详细数据</p>
-      <div class="container bg-white shadow py-3 bg-opacity-10">
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">DataItem1</h6>
-              <small class="text-muted">DataItem1 Intro</small>
-            </div>
-            <span class="text-muted">5%</span>
-          </li>
-        </ul>
+
+      <div class="row">
+        <div class="col">
+          <div class="container-md bg-white bg-opacity-10 pt-3 text-white text-center" style="margin: 4px">
+            <p class="lead">box_images</p>
+              <div class="row">
+                <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["box_images"][0]) }}" alt="暂无图片" style="width: 230px; height: 230px; margin: 2px;"/>
+                <div class="col">
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_images"][0]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_images"][1]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_images"][2]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_images"][3]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_images"][4]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_images"][5]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="container-md bg-white bg-opacity-10 pt-3 text-white text-center" style="margin: 4px">
+            <p class="lead">srm_images</p>
+              <div class="row">
+                <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["box_images"][1]) }}" alt="暂无图片" style="width: 230px; height: 230px; margin: 2px;"/>
+                <div class="col">
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_srm"][0]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_srm"][1]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_srm"][2]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_srm"][3]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_srm"][4]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                  <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_srm"][5]) }}" alt="暂无图片" style="width: 60px; height: 60px; margin: 1px;"/>
+                </div>
+              </div>
+          </div>
+        </div>
       </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container-md bg-white bg-opacity-10 pt-3 text-white text-center" style="margin: 4px">
+            <p class="lead">heatMap</p>
+              <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["heatmap"]) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 2px;"/>
+            <br><br>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="container-md bg-white bg-opacity-10 pt-3 text-white text-center" style="margin: 4px">
+            <p class="lead">activation_map</p>
+              <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["activation_map"]) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 2px;"/>
+            <br><br>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-    <div class="col-md-8 order-md-1 px-5">
-      <p class="display-6 text-white">摘要</p>
-        <div class="container bg-white bg-opacity-10 pt-5">
-           <img class="dtbj_pic" src="{{ url_for('static', filename=cam_pic_path) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 5px;"/>
-          <img class="dtbj_pic" src="{{ url_for('static', filename=win_pic_path) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 5px;"/>
+
+    <div class="col-md-4 order-md-1 px-5">
+      <p class="display-6 text-white">检测结果摘要</p>
+        <div class="container bg-white bg-opacity-10 pt-3">
+           <img class="dtbj_pic" src="{{ url_for('static', filename=info_dict["raw_images"]) }}" alt="暂无图片" style="width: 300px; height: 300px; margin: 5px;"/>
         <div>
           <br>
-        <div class="container bg-white bg-opacity-10 shadow-lg row pt-4 text-white">
-          <div class="col">
-            <h3>是否深度伪造：</h3><p class="lead">{{ real }}</p>
-            <h3>判断精度：</h3><p class="lead">{{ real_rate }}%</p>
-          </div>
-          <div class="col">
-            <h3>数据解释:</h3>
-            <p class="lead">解释不了，解释不动，释不动解，不了释不，*……&（&*……</p>
+            <br>
+      <div class="container bg-white bg-opacity-10 shadow-lg row pt-3 text-white">
+          <div class="col text-center">
+            <h3>是否深度伪造：</h3><p class="lead">{{ info_dict["real"] }}</p>
+            <h3>判断精度：</h3><p class="lead">{{ info_dict["real_rate"] }}%</p>
           </div>
         </div>
           <br>
     </div>
   </div>
-
-
-
-
+    </div>
+  </div>
 </main>
 
 

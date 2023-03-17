@@ -34,18 +34,24 @@ def index():  # 主页面
 
 @app.route('/main', methods=['GET', 'POST'])
 def index2():
-    info_dict = pre()
+    info_dict = {
+        "real": "是",
+        "real_rate": 0.1,
+        "activation_map": "pic/activation_map.png",
+        "box_images": ["pic/box_raw_images.png", "pic/box_srm_images.png"],
+        "heatmap": "pic/heatmap.png",
+        "raw_images": "pic/raw_images.png",
+        "win_images": [f'pic/win_images{i}.png' for i in range(0, 6, 1)],
+        "win_srm": [f'pic/win_srm{i}.png' for i in range(0, 6, 1)]
+    }
+    # info_dict = pre()
     """
     info_dict["real_rate"] = real_rate
         info_dict["real"] = real
         info_dict["cam_pic_path"] = cam_pic_path
         info_dict["win_pic_path"] = win_pic_path
     """
-    return render_template('databash.html',
-                           real="否" if info_dict['real'] else "是",
-                           real_rate=info_dict["real_rate"],
-                           cam_pic_path=info_dict["cam_pic_path"],
-                           win_pic_path=info_dict["win_pic_path"])
+    return render_template('databash.html', info_dict=info_dict)
 
 
 # @app.route('/predict', methods=['GET', 'POST'])
