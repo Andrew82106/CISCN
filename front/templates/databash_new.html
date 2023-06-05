@@ -70,10 +70,10 @@ var t = null;
 <div class="mainbox">
     <ul class="clearfix">
         <li>
-            <div class="boxall" style="height: 5.3rem">
-                <div class="alltitle">srm_images</div>
-                <div class="row">
-                <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["box_images"][1]) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 4px;"/>
+            <div class="boxall1" style="height: 5.3rem">
+                <div class="alltitle1">srm_images</div>
+                <div class="row" style="height: 5.3rem; display: flex; justify-content: center; align-items: center;">
+                    <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["box_images"][1]) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 4px;"/>
                 <div class="col">
                   <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_srm"][0]) }}" alt="暂无图片" style="width: 55px; height: 55px; margin: 1px;"/>
                   <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_srm"][1]) }}" alt="暂无图片" style="width: 55px; height: 55px; margin: 1px;"/>
@@ -85,8 +85,8 @@ var t = null;
               </div>
                 <div class="boxfoot"></div>
             </div>
-            <div class="boxall" style="height: 4.4rem">
-                <div class="alltitle">activation_map</div>
+            <div class="boxall1" style="height: 4.2rem; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div class="alltitle1">activation_map</div>
                     <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["activation_map"]) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 2px;"/>
                 <div class="boxfoot">
 
@@ -118,9 +118,9 @@ var t = null;
 
         </li>
         <li>
-            <div class="boxall" style="height:5.3rem">
-                <div class="alltitle">box_images</div>
-                <div class="row">
+            <div class="boxall1" style="height:5.3rem">
+                <div class="alltitle1">box_images</div>
+                <div class="row" style="height: 5.3rem; display: flex; justify-content: center; align-items: center;">
                 <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["box_images"][0]) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 2px;"/>
                     <div class="col">
                       <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["win_images"][0]) }}" alt="暂无图片" style="width: 55px; height: 55px; margin: 1px;"/>
@@ -133,8 +133,8 @@ var t = null;
                   </div>
                 <div class="boxfoot"></div>
             </div>
-            <div class="boxall" style="height: 4.2rem">
-                <div class="alltitle">heatMap</div>
+            <div class="boxall1" style="height: 4.2rem; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div class="alltitle1">heatMap</div>
                 <img class="col dtbj_pic" src="{{ url_for('static', filename=info_dict["heatmap"]) }}" alt="暂无图片" style="width: 250px; height: 250px; margin: 2px;"/>
                 <div class="boxfoot"></div>
             </div>
