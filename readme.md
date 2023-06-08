@@ -12,12 +12,14 @@
 
 update后的界面（可能比之前的界面多了些可以动的光点，布局上其实比较抽象）
 
-![img.png](img.png)
+![img_3.png](img_3.png)
+
+![img_4.png](img_4.png)
 
 # update in 6.5
 
 添加menu界面：
-![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 路由为``/menu``
 
 然后点击后跳转到具体模型页面

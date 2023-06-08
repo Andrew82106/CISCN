@@ -57,7 +57,13 @@ def index2():
 @app.route("/menu", methods=['GET', 'POST'])
 def menu():
     pic_route = "pic/demo.jpg"
+    header = ["字段1", "字段2", "字段3"]
     monk = [
+        {"字段1": "model", "字段2": "100%", "字段3": "0.01sec", "url": "'/main2'"},
+        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main2'"},
+        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main2'"},
+        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main2'"},
+        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main2'"},
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
@@ -76,20 +82,16 @@ def menu():
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
-        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
-        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
-        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
-        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
-        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3", "url": "'/main1'"},
-
     ]
     monk1 = [
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3"},
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3"},
+        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3"},
+        {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3"},
     ]
     rate = 40
-    data_used = monk
-    return render_template('menu.html', data=data_used, pic_route=pic_route, data_len=len(data_used), percentage=rate)
+    data_used = monk1
+    return render_template('menu.html', data=data_used, pic_route=pic_route, data_len=len(data_used), percentage=rate, header=header)
 
 
 @app.route('/main1', methods=['GET', 'POST'])
@@ -113,6 +115,27 @@ def index3():
     """
     return render_template('databash_new.html', info_dict=info_dict)
 
+
+@app.route('/main2', methods=['GET', 'POST'])
+def index4():
+    info_dict = {
+        "real": "是",
+        "real_rate": 0.1,
+        "activation_map": "pic/activation_map.png",
+        "box_images": ["pic/box_raw_images.png", "pic/box_srm_images.png"],
+        "heatmap": "pic/heatmap.png",
+        "raw_images": "pic/raw_images.png",
+        "win_images": [f'pic/win_images{i}.png' for i in range(0, 6, 1)],
+        "win_srm": [f'pic/win_srm{i}.png' for i in range(0, 6, 1)]
+    }
+    # info_dict = pre()
+    """
+    info_dict["real_rate"] = real_rate
+        info_dict["real"] = real
+        info_dict["cam_pic_path"] = cam_pic_path
+        info_dict["win_pic_path"] = win_pic_path
+    """
+    return render_template('databash_new_new.html', info_dict=info_dict)
 
 # @app.route('/predict', methods=['GET', 'POST'])
 def pre():
