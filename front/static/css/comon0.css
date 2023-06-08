@@ -174,7 +174,9 @@ a:hover {
 }
 
 .weather {
+    display: flex;
     position: absolute;
+    align-items: center;
     right: .3rem;
     top: 0;
     line-height: .75rem;
