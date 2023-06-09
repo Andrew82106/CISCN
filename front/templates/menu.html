@@ -8,6 +8,12 @@
     {% if finish_ %}
     <meta http-equiv="refresh" content="0; URL=/finish">
     {% endif %}
+    <style>
+        .parent-container table {
+            border-collapse: separate;
+            border-spacing: 0 13px; /* 设置行的垂直间距为10px，可以根据需要进行调整 */
+        }
+    </style>
 </head>
 <script>
     $(window).load(function () {
@@ -30,9 +36,9 @@
 <script type="text/javascript" src="../static/js/china.js"></script>
 
 <body>
-<div class="canvas" style="opacity: .2">
+<!--<div class="canvas" style="opacity: .2">
     <iframe frameborder="0" src="../static/js/index.html" style="width: 100%; height: 100%"></iframe>
-</div>
+</div>-->
 <div class="loading">
     <div class="loadbox"><img src="../static/picture/loading.gif"> 页面加载中...</div>
 </div>
@@ -93,6 +99,7 @@
             </div>
         </li>
         <li>
+            <!--
             <div class="parent-container">
                 <div class="boxall" style="height: 1rem">
                     <div class="name-container">
@@ -115,6 +122,32 @@
                     <div class="boxfoot"></div>
                 </div>
                 {% endfor %}
+            </div>
+            -->
+            <div class="boxall" style="height: 10rem;width: 13.8rem; display: flex; justify-content: center; align-items: center;">
+                <div class="parent-container">
+                    <table style="width: 980px;font-size: 2rem">
+                    <thead>
+                    <tr>
+                        <th style="color: skyblue; font-size: .4rem">{{ header[0] }}</th>
+                        <th style="color: skyblue; font-size: .4rem">{{ header[1] }}</th>
+                        <th style="color: skyblue; font-size: .4rem">{{ header[2] }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for datai in data %}
+                    <tr>
+                        <td style="color: white; font-size: .3rem">{{ datai['字段1'] }}</td>
+                        <td style="color: white; font-size: .3rem">{{ datai['字段2'] }}</td>
+                        <td style="color: white; font-size: .3rem">{{ datai['字段3'] }}</td>
+                        <td>
+                            <button onclick="window.location.href = {{ datai['url'] }};">detail</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                </div>
             </div>
         </li>
     </ul>
