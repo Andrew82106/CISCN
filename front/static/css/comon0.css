@@ -297,6 +297,13 @@ a:hover {
 
 }
 
+.special_td{
+    border: 1px solid rgba(25, 186, 139, .17);
+    padding: 0.01rem .01rem .01rem;
+    background: rgba(255, 255, 255, .04) url(../images/line.png);
+    background-size: 100% auto;
+}
+
 .boxall1 {
     border: 1px solid rgba(25, 186, 139, .17);
     padding: 0 .1rem .1rem .1rem;

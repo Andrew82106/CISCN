@@ -90,7 +90,7 @@ def menu():
         {"字段1": "内容1", "字段2": "内容2", "字段3": "内容3"},
     ]
     rate = 40
-    data_used = monk
+    data_used = monk1
     return render_template('menu.html', data=data_used, pic_route=pic_route, data_len=len(data_used), percentage=rate, header=header)
 
 
