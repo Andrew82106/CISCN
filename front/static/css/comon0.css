@@ -207,13 +207,13 @@ a:hover {
 }
 
 .mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
 }
 
 
@@ -266,8 +266,8 @@ a:hover {
 .button-container button {
     font-size: 15px; /* 调整按钮字体大小为1.2rem */
     padding: 0.2rem 0.3rem; /* 调整按钮内边距，增加按钮大小 */
-    border: 2px solid rgba(74,144,226,0.3); /* 设置边框为实线，并透明填充 */
-    background-color: rgba(155,155,155,0.1); /* 设置背景颜色为透明 */
+    border: 2px solid rgba(74, 144, 226, 0.3); /* 设置边框为实线，并透明填充 */
+    background-color: rgba(155, 155, 155, 0.1); /* 设置背景颜色为透明 */
     color: white; /* 设置按钮文本颜色为白色 */
     transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
 }
@@ -275,8 +275,8 @@ a:hover {
 .button-container button:hover {
     font-size: 15px; /* 调整按钮字体大小为1.2rem */
     padding: 0.2rem 0.3rem; /* 调整按钮内边距，增加按钮大小 */
-    border: 2px solid rgba(74,144,226,1); /* 设置边框为实线，并透明填充 */
-    background-color: rgba(155,155,155,0.8); /* 设置背景颜色为透明 */
+    border: 2px solid rgba(74, 144, 226, 1); /* 设置边框为实线，并透明填充 */
+    background-color: rgba(155, 155, 155, 0.8); /* 设置背景颜色为透明 */
     color: white; /* 设置按钮文本颜色为白色 */
 }
 
@@ -288,7 +288,7 @@ a:hover {
     position: relative;
     z-index: 10;
     width: 13rem;
-	height: 2rem;
+    height: 2rem;
     flex-basis: calc(100%); /* 让每个boxall对象占据33.33%的宽度，并减去1rem的间距 */
     margin-right: 0.2rem; /* 为每个boxall对象添加1rem的右侧间距 */
     margin-bottom: 0.1rem; /* 为每个boxall对象添加1rem的下方间距 */
@@ -297,12 +297,43 @@ a:hover {
 
 }
 
-.special_td{
-    border: 1px solid rgba(25, 186, 139, .17);
-    padding: 0.01rem .01rem .01rem;
-    background: rgba(255, 255, 255, .04) url(../images/line.png);
-    background-size: 100% auto;
+
+.special_td {
+  height: 0.5rem;
+  position: relative;
+  background-color: rgba(0, 0, 255, 0.1);
+  overflow: hidden;
+  /*border-top: 1px ridge yellow;*/
 }
+
+.special_td::before,
+.special_td::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 237, 124, 0.5);
+  transition: all 0.3s ease;
+}
+
+.special_td::before {
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+}
+
+.special_td::after {
+  bottom: 0;
+  right: 0;
+  transform: translate(100%, 100%);
+}
+
+.special_td:hover::before,
+.special_td:hover::after {
+  transform: translate(0, 0);
+}
+
+
 
 .boxall1 {
     border: 1px solid rgba(25, 186, 139, .17);
@@ -372,6 +403,7 @@ a:hover {
 .dtbj_pic {
     text-align: center;
 }
+
 .subtitle {
     font-size: .1rem;
     color: #fff;
@@ -396,14 +428,14 @@ a:hover {
     bottom: 0;
 }
 
-.oper_button{
+.oper_button {
     width: 1.2rem;
     height: 0.4rem;
     margin: 0.3rem;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     font-weight: bold;
-    justify-content:center;
+    justify-content: center;
 }
 
 th {
