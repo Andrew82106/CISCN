@@ -460,6 +460,27 @@ table {
     text-align: left;
 }
 
+.new_button {
+  display: inline-block;
+    padding: 0.2rem;
+  background-color: rgba(33, 150, 243, 0.1);
+  color: #fff;
+  font-size: .2rem;
+  border: solid rgba(25, 177, 215, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new_button:hover {
+  background-color: #99c5ea;
+}
+
+.new_button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.5);
+}
+
+
 .button-container {
     display: flex;
     align-items: center;
